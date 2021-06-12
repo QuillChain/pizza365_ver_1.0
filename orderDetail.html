@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<!-- original website https://www.w3schools.com/w3css/tryw3css_templates_marketing.htm# -->
+<title>Order Detail</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- original css-->
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<link rel="stylesheet" href="p3css/p3.css">
+
+<!-- font -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Lato", sans-serif
+  }
+
+  .mySlides {
+    display: none
+  }
+
+  .w3-tag,
+  .fa {
+    cursor: pointer
+  }
+
+  .w3-tag {
+    height: 15px;
+    width: 15px;
+    padding: 0;
+    margin-top: 6px
+  }
+</style>
+
+<body>
+
+
+
+  <!-- Content -->
+  <div class="jumbotron">
+
+    <h1> Order Detail !!! </h1>
+
+    <!-- order id -->
+    <div class="row">
+      <label>Order ID (Mã Order)</label>
+      <input type="text" id="order-id" class="form-control" style="width:100%;">
+    </div>
+
+    <!-- cỡ combo -->
+    <div class="row">
+      <label>Cỡ Combo</label>
+      <input type="text" id="combosize" class="form-control" style="width:100%;">
+    </div>
+
+    <!-- đường kính -->
+    <div class="row">
+      <label>Đường Kính</label>
+      <input type="text" id="duongkinh" class="form-control" style="width:100%;">
+    </div>
+
+    <!-- Sườn nướng -->
+    <div class="row">
+      <label>Sườn Nướng(Miếng)</label>
+      <input type="text" id="suon-nuong" class="form-control" style="width:100%;">
+    </div>
+
+
+    <!-- đồ uống -->
+    <div class="row">
+      <label>Đồ uống</label>
+      <input type="text" name="" id="select-drink" class="form-control" style="width:100%;">
+    </div>
+
+    <!-- Số lượng nước uống -->
+    <div class="row">
+      <label>Số Lượng Nước Uống</label>
+      <input type="text" id="so-luong-nuoc" class="form-control" style="width:100%;">
+    </div>
+
+    <div class="row">
+      <label>Voucher ID (mã voucher)</label>
+      <input type="text" id="voucher-id" class="form-control" style="width:100%;">
+    </div>
+
+
+    <!-- Pizza Type -->
+    <div class="row">
+      <label>Pizza Type</label>    
+      <input type="text" id="pizzatype" class="form-control" style="width:100%;">
+      
+    </div>
+
+
+    <!-- Salad -->
+    <div class="row">
+      <label>Salad (g)</label>
+      <input type="text" id="salad" class="form-control" style="width:100%;">
+    </div>
+    <!-- Thành Tiền -->
+    <div class="row">
+      <label>Thành Tiền </label>
+      <input type="text" id="thanh-tien" class="form-control" style="width:100%;">
+    </div>
+    <!-- Giam Gia -->
+    <div class="row">
+      <label>Giảm Giá (discount) </label>
+      <input type="text" id="giam-gia" class="form-control" style="width:100%;">
+    </div>
+
+    <div class="row">
+      <label>Họ và tên </label>
+      <input type="text" id="name" class="form-control" style="width:100%;">
+    </div>
+
+    <div class="row">
+      <label>email</label>
+      <input type="text" id="email" class="form-control" style="width:100%;">
+    </div>
+
+    <div class="row">
+      <label>Số điện thoại</label>
+      <input type="text" id="phone-number" class="form-control" style="width:100%;">
+    </div>
+
+    <div class="row">
+      <label>Địa chỉ</label>
+      <input type="text" id="adress" class="form-control" style="width:100%;">
+    </div>
+
+    <div class="row">
+      <label>Lời nhắn</label>
+      <input type="text" id="message" class="form-control" style="width:100%;">
+    </div>
+
+    <div class="row">
+      <label>Trạng Thái Đơn Hàng</label>
+      <input type="text" id="oder-status" class="form-control" style="width:100%;">
+    </div>
+
+    <div class="row">
+      <label>Ngày Tạo Đơn</label>
+      <input type="text" id="ngay-tao-don" class="form-control" style="width:100%;">
+    </div>
+    <div class="row">
+      <label>Ngày Cập Nhật</label>
+      <input type="text" id="ngay-cap-nhat" class="form-control" style="width:100%;">
+    </div>
+
+
+    <br>
+    <div class="row">
+      <div class="btn-group" role="group">
+        <button id="button-confirm" onclick="onClickConfirm()" class="btn btn-primary">
+          Confirm
+        </button>
+
+        <button id="button-cancel" onclick="onClickCancel()" class="btn btn-danger">
+          Cancel
+        </button>
+      </div>
+
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <script src="p3js/orderDetail.js"></script>
+
+
+</body>
+
+</html>
